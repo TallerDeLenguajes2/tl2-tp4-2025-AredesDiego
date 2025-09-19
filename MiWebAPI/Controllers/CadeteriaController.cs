@@ -35,7 +35,6 @@ public class CadeteriaController : ControllerBase
     [HttpPut("AsignarPedido")]
     public Pedido AgregarPedido(int idPedido, int idCadete)
     {
-        as
     }
 
     [HttpPut("CambiarEstadoPedido")]
