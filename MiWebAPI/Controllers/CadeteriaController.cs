@@ -14,6 +14,7 @@ public class CadeteriaController : ControllerBase
     }
 
     //Get
+    
     [HttpGet("GetPedidos")]
     public List<Pedido> GetPedidos()
     {
@@ -41,26 +42,37 @@ public class CadeteriaController : ControllerBase
 
         return Ok(informe);
     }
+
+
     //Post
-    
 
-/*     //Put
-            [HttpPut("AsignarPedido")]
-            public Pedido AgregarPedido(int idPedido, int idCadete)
-            {
-            }
+    [HttpPost("AgregarPedido")]
+    public IActionResult AgregarPedido([FromBody] Pedido pedido)
+    {
+        var pedidos = accesoADatosJSONPedido.Cargar("data/pedidos.json");
+        pedidos.Add(pedido);
+        accesoADatosJSONPedido.Guardar(pedidos, "data/pedidos.json");
+        return Ok(pedido);
+    }
 
-            [HttpPut("CambiarEstadoPedido")]
-            public Pedido CambiarEstadoPedido(int idPedido, int idCadete)
-            {
+    //Put
 
-            } */
+    [HttpPut("AsignarPedido")]
+    public IActionResult AsignarPedido(int idPedido, int idCadete)
+    {
+        return Ok();
+    }
+
+    [HttpPut("CambiarEstadoPedido")]
+    public IActionResult CambiarEstadoPedido(int idPedido, int idCadete)
+    {
+        return Ok();
+    } 
 
     [HttpPut("CambiarCadetePedido")]
-    public Pedido CambiarCadetePedido(int idPedido, int idCadete)
+    public IActionResult CambiarCadetePedido(int idPedido, int idCadete)
     {
-        Pedido pedido = new Pedido();
-        return pedido;
+       return Ok();
     }
 
 }
