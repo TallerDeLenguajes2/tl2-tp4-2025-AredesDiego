@@ -20,9 +20,9 @@ public class CadeteriaController : ControllerBase
     /// </summary>
     /// <returns>Retorna los Pedidos cargados</returns>
     [HttpGet("GetPedidos")]
-    public List<Pedido> GetPedidos()
+    public IActionResult GetPedidos()
     {
-        return accesoADatosJSONPedido.Cargar("data/pedidos.json");
+        return Ok(accesoADatosJSONPedido.Cargar("data/pedidos.json"));
     }
 
     /// <summary>
