@@ -61,7 +61,7 @@ public class CadeteriaController : ControllerBase
     /// <summary>
     /// Su funcion es agregar un pedido al JSON
     /// </summary>
-    /// <param name="pedido que se agregara"></param>
+    /// <param name="pedido"></param>
     /// <returns>Agregar el pedido entregado</returns>
     [HttpPost("AgregarPedido")]
     public IActionResult AgregarPedido([FromBody] Pedido pedido)
@@ -77,8 +77,8 @@ public class CadeteriaController : ControllerBase
     /// <summary>
     /// Asignar un pedido a un cadete
     /// </summary>
-    /// <param name="id del Pedido"></param>
-    /// <param name="id del Cadete"></param>
+    /// <param name="idPedido"></param>
+    /// <param name="idCadete"></param>
     /// <returns>Retorna el pedido o id del pedido/id del cadete</returns>
     [HttpPut("AsignarPedido")]
     public IActionResult AsignarPedido(int idPedido, int idCadete)
@@ -103,11 +103,11 @@ public class CadeteriaController : ControllerBase
     /// <summary>
     /// Cambia el estado del pedido con el id solicitado
     /// </summary>
-    /// <param name="id del Pedido"></param>
-    /// <param name="estado a cambiar"></param>
+    /// <param name="idPedido"></param>
+    /// <param name="estado"></param>
     /// <returns>El pedido encontrado o id del pedido</returns>
     [HttpPut("CambiarEstadoPedido")]
-    public IActionResult CambiarEstadoPedido(int idPedido, [FromQuery] bool completado)
+    public IActionResult CambiarEstadoPedido(int idPedido, [FromQuery] bool estado)
     {
         var pedidos = accesoADatosJSONPedido.Cargar("data/pedidos.json");
 
@@ -115,7 +115,7 @@ public class CadeteriaController : ControllerBase
         if (pedido == null)
             return NotFound($"No se encontró el pedido Nro {idPedido}");
 
-        pedido.Estado = completado;
+        pedido.Estado = estado;
         accesoADatosJSONPedido.Guardar(pedidos, "data/pedidos.json");
 
         return Ok(pedido);
@@ -124,8 +124,8 @@ public class CadeteriaController : ControllerBase
     /// <summary>
     /// Cambia el cadete asignado a un pedido existente
     /// </summary>
-    /// <param name="id del Pedido"></param>
-    /// <param name="id del nuevo Cadete"></param>
+    /// <param name="idPedido"></param>
+    /// <param name="idNuevoCadete"></param>
     /// <returns>Pedido actualizado o error si no se encuentra</returns>
     [HttpPut("CambiarCadetePedido")]
     public IActionResult CambiarCadetePedido(int idPedido, int idNuevoCadete)

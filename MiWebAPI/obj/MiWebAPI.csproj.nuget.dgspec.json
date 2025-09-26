@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "I:\\Materias de la Facultad\\Segundo año\\Segundo Cuatrimestre\\Taller de Lenguajes 2\\Tp4\\MiWebAPI\\MiWebAPI.csproj": {}
+    "C:\\Users\\Alumno\\Desktop\\Tp5-ElDiego\\tl2-tp4-2025-AredesDiego\\MiWebAPI\\MiWebAPI.csproj": {}
   },
   "projects": {
-    "I:\\Materias de la Facultad\\Segundo año\\Segundo Cuatrimestre\\Taller de Lenguajes 2\\Tp4\\MiWebAPI\\MiWebAPI.csproj": {
+    "C:\\Users\\Alumno\\Desktop\\Tp5-ElDiego\\tl2-tp4-2025-AredesDiego\\MiWebAPI\\MiWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "I:\\Materias de la Facultad\\Segundo año\\Segundo Cuatrimestre\\Taller de Lenguajes 2\\Tp4\\MiWebAPI\\MiWebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Alumno\\Desktop\\Tp5-ElDiego\\tl2-tp4-2025-AredesDiego\\MiWebAPI\\MiWebAPI.csproj",
         "projectName": "MiWebAPI",
-        "projectPath": "I:\\Materias de la Facultad\\Segundo año\\Segundo Cuatrimestre\\Taller de Lenguajes 2\\Tp4\\MiWebAPI\\MiWebAPI.csproj",
-        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
-        "outputPath": "I:\\Materias de la Facultad\\Segundo año\\Segundo Cuatrimestre\\Taller de Lenguajes 2\\Tp4\\MiWebAPI\\obj\\",
+        "projectPath": "C:\\Users\\Alumno\\Desktop\\Tp5-ElDiego\\tl2-tp4-2025-AredesDiego\\MiWebAPI\\MiWebAPI.csproj",
+        "packagesPath": "C:\\Users\\Alumno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alumno\\Desktop\\Tp5-ElDiego\\tl2-tp4-2025-AredesDiego\\MiWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Alumno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.410/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
