@@ -5,6 +5,7 @@ public class Cliente
     public int Telefono { get; set; }
     public string DatosDeReferenciaDireccion { get; set; }
 
+    public Cliente() { }
     public Cliente(string nombre, string direccion, int telefono)
     {
         Nombre = nombre;
