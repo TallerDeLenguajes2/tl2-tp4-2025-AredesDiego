@@ -6,7 +6,6 @@ public class Pedido
     public string Obs { get; set; }
     public Cadete? CadeteAsignado { get; set; }
 
-    public Pedido(){}
     public Pedido(bool estado, Cliente cliente, int nro, string obs, Cadete? cadeteAsignado = null)
     {
         Estado = estado;

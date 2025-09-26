@@ -9,7 +9,7 @@ public class AccesoADatosJSON<T> : IAccesoADatos<T>
     {
         if (!File.Exists(archivo))
         {
-            return new List<T>(); // ← SIN Console.WriteLine
+            return new List<T>(); 
         }
 
         string json = File.ReadAllText(archivo);
