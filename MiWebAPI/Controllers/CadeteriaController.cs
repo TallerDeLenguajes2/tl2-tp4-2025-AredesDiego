@@ -31,7 +31,7 @@ public class CadeteriaController : ControllerBase
         return pedido;
     }
 
-    //Put
+/*     //Put
     [HttpPut("AsignarPedido")]
     public Pedido AgregarPedido(int idPedido, int idCadete)
     {
@@ -41,12 +41,13 @@ public class CadeteriaController : ControllerBase
     public Pedido CambiarEstadoPedido(int idPedido, int idCadete)
     {
 
-    }
+    } */
     
     [HttpPut("CambiarCadetePedido")]
     public Pedido CambiarCadetePedido(int idPedido, int idCadete)
     {
-
+        Pedido pedido = new Pedido();
+        return pedido;
     }
 
 }
